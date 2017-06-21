@@ -1,7 +1,7 @@
 :source-highlighter: coderay
 :data-uri:
 
-= HTML to PDF Generation Example
+= PdfGenerator
 
 This project demonstrates HTML to PDF generation using iText 4.2.1 and LibreOffice.
 
@@ -19,7 +19,7 @@ Follow these steps to get started:
 1) Git-clone this repository.
 
 ----
-$ git clone git://github.com/damianmcdonald/pdf-generator.git my-project
+$ git clone git://github.com/damianmcdonald/pdfgenerator.git my-project
 ----
 
 2) Change directory into your clone:
