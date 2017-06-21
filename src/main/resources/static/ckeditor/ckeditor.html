@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.editor-container {
+  width: 80%;
+  margin: 0 auto; 
+}
+
+textarea {
+  width: 80%;
+  height: 500px;
+}
+
+xmp {
+  font-size: 18px; 
+  border: 2px dashed grey;
+}
+
+
+</style>
+	<script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/ckeditor/ckeditor.js"></script>
+  
+  <script>
+	  $(document).ready(function() {
+	  	$("#demo-button").click(function() {
+			//console.log("Editor content = " + CKEDITOR.instances.editor1.getData());
+			var text = CKEDITOR.instances.editor1.getData();
+		  $("#generated-code-view").html(text);
+		});
+	});
+	</script>
+	
+</head>
+<div class="editor-container">
+<img src="images/CKEditor_logo.png"/>
+<hr/>
+  <form>
+            <textarea name="editor1" id="editor1">
+                
+            </textarea>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1' );
+            </script>
+        </form>
+  </div>
+  <div class="container output-container">
+	<hr/>
+	<button id="demo-button">Show HTML letter code</button>
+	<xmp id="generated-code-view" style="border: 2px dashed grey;">
+	</xmp>
+</div>	
+</body>
+</html>
